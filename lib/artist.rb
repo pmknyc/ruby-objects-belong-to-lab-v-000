@@ -3,17 +3,14 @@
 
 #Artists should have a name.
 class Artist
-attr_accessor :name, :songs
-
-	def initialize
-		@songs = []
-	end
+attr_accessor :name, :song, :songs
+	@songs = []
 
   def name
     @name
   end
 
-	def add_song(song)
+	def song=(song)
 		@songs << song
 		song.artist = self
 	end

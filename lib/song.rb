@@ -1,3 +1,4 @@
+require 'pry'
 
 #################################
 # Songs should have a title
@@ -8,20 +9,16 @@
 class Song
 attr_accessor :title, :artist
 
-def initialize(title)
-	@title = title
-
+def title
+	@title
 end
 
 def artist=(song_artist)
 	@artist = song_artist #tells song its artist name
-	if !@artist.songs.include?(self)
-		@artist.songs << self #tell artist it has this song
-	end
 end
 #class Song end below
 end
 
 
-beyonce = Artist.new("Beyonce")
-beysong = Song.new('Love Song')
+# beyonce = Artist.new("Beyonce")
+# beysong = Song.new('Love Song')
