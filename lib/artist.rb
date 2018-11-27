@@ -12,7 +12,6 @@ attr_accessor :name, :song, :songs
 
 	def song=(song)
 		@songs << song
-		song.artist = self
 	end
 
 #class Artist end below
